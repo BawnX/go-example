@@ -1,11 +1,15 @@
-package data
+package tests
 
-import "testing"
+import (
+	"ms/data"
+	"testing"
+)
 
 func TestChecksValidation(t *testing.T) {
-	p := &Product{
+	p := &data.Product{
 		Name:  "test",
 		Price: 1.00,
+		SKU:   "abs-asd-adde",
 	}
 	err := p.Validate()
 
