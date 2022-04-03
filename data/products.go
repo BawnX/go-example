@@ -3,16 +3,18 @@ package data
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/go-playground/validator"
 	"io"
+	"regexp"
 	"time"
 )
 
 type Product struct {
 	ID          int     `json:"id"`
-	Name        string  `json:"name"`
+	Name        string  `json:"name" validate:"required"`
 	Description string  `json:"description"`
-	Price       float32 `json:"price"`
-	SKU         string  `json:"sku"`
+	Price       float32 `json:"price" validate:"gt=0"`
+	SKU         string  `json:"sku" validate:"required,sku"`
 	CreateOn    string  `json:"-"`
 	UpdateOn    string  `json:"-"`
 	DeleteOn    string  `json:"-"`
@@ -87,4 +89,20 @@ func findProduct(id int) (*Product, int, error) {
 	}
 
 	return nil, -1, ErrorProductNotFound
+}
+
+func (p *Product) Validate() error {
+	validate := validator.New()
+	_ = validate.RegisterValidation("sku", ValidateSku)
+	return validate.Struct(p)
+}
+
+func ValidateSku(fl validator.FieldLevel) bool {
+	re := regexp.MustCompile(`[a-z]+-[a-z]+-[a-z]+`)
+	matches := re.FindAllString(fl.Field().String(), -1)
+	if len(matches) != 1 {
+		return false
+	}
+
+	return true
 }
