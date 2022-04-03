@@ -1,0 +1,5 @@
+# Example Microservice
+
+## Used external projects
+air: https://github.com/cosmtrek/air
+gorilla: https://www.gorillatoolkit.org
