@@ -1,6 +1,7 @@
 package tests
 
 import (
+	"bytes"
 	"github.com/stretchr/testify/assert"
 	"ms/data"
 	"testing"
@@ -47,18 +48,18 @@ func TestValidProductDoesNOTReturnsErr(t *testing.T) {
 	}
 
 	v := data.NewValidation()
-	_ = v.Validate(p)
-	//assert.Nil(t, err)
+	err := v.Validate(p)
+	assert.Nil(t, err)
 }
 
-//func TestProductsToJSON(t *testing.T) {
-//	ps := []*data.Product{
-//		&data.Product{
-//			Name: "abc",
-//		},
-//	}
-//
-//	b := bytes.NewBufferString("")
-//	err := data.ToJSON(ps, b)
-//	assert.NoError(t, err)
-//}
+func TestProductsToJSON(t *testing.T) {
+	ps := []*data.Product{
+		&data.Product{
+			Name: "abc",
+		},
+	}
+
+	b := bytes.NewBufferString("")
+	err := data.ToJSON(ps, b)
+	assert.NoError(t, err)
+}

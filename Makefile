@@ -13,6 +13,5 @@ swagger:
 run:
 	air -c air.toml
 
-
 generate_client:
 	cd sdk && swagger generate client -f ../swagger.yaml -A product-api
