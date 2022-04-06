@@ -6,11 +6,8 @@
 - **Swagger**: rest api documentation with open api and sdk client, url: https://goswagger.io/
 ## TODO
 - DockerFile
-- Environment
 - Redis Framework
 - ORM
 - Graphql
-- Logs
 - Modelo Github
 - Estructa Codigo
-- Deep

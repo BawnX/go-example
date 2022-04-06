@@ -11,7 +11,10 @@ swagger:
 	swagger generate spec -o ./swagger.yaml --scan-models
 
 run:
-	air -c air.toml
+	BIND_ADDRESS=3000 LOG_LEVEL=trace air -c air.toml
 
 generate_client:
 	cd sdk && swagger generate client -f ../swagger.yaml -A product-api
+
+test:
+	cd tests && go test -v
