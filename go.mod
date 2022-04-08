@@ -1,4 +1,4 @@
-module ms
+module github.com/BawnX/go-example
 
 go 1.18
 
