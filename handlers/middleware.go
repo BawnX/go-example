@@ -2,7 +2,7 @@ package handlers
 
 import (
 	"context"
-	"ms/data"
+	"github.com/BawnX/go-example/data"
 	"net/http"
 )
 

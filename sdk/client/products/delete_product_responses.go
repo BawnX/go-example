@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 
-	"ms/sdk/models"
+	"github.com/BawnX/go-example/sdk/models"
 )
 
 // DeleteProductReader is a Reader for the DeleteProduct structure.

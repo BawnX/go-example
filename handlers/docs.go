@@ -15,7 +15,7 @@
 // swagger:meta
 package handlers
 
-import "ms/data"
+import "github.com/BawnX/go-example/data"
 
 //
 // NOTE: Types defined here are purely for documentation purposes

@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"ms/files"
+	"github.com/BawnX/go-example/files"
 	"net/http"
 	"path/filepath"
 

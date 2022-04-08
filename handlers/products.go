@@ -2,9 +2,9 @@ package handlers
 
 import (
 	"fmt"
+	"github.com/BawnX/go-example/data"
 	"github.com/gorilla/mux"
 	"log"
-	"ms/data"
 	"net/http"
 	"strconv"
 )
