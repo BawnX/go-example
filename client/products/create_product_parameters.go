@@ -7,6 +7,7 @@ package products
 
 import (
 	"context"
+	"github.com/BawnX/go-example/models"
 	"net/http"
 	"time"
 
@@ -14,8 +15,6 @@ import (
 	"github.com/go-openapi/runtime"
 	cr "github.com/go-openapi/runtime/client"
 	"github.com/go-openapi/strfmt"
-
-	"github.com/BawnX/go-example/sdk/models"
 )
 
 // NewCreateProductParams creates a new CreateProductParams object,

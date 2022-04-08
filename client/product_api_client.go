@@ -6,11 +6,10 @@ package client
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
+	"github.com/BawnX/go-example/client/products"
 	"github.com/go-openapi/runtime"
 	httptransport "github.com/go-openapi/runtime/client"
 	"github.com/go-openapi/strfmt"
-
-	"github.com/BawnX/go-example/sdk/client/products"
 )
 
 // Default product API HTTP client.

@@ -7,12 +7,11 @@ package products
 
 import (
 	"fmt"
+	"github.com/BawnX/go-example/models"
 	"io"
 
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
-
-	"github.com/BawnX/go-example/sdk/models"
 )
 
 // ListProductsReader is a Reader for the ListProducts structure.
